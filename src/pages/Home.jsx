@@ -14,8 +14,9 @@ const Home = () => {
         const data = json.data.slice(0, 6);
 
         const formatted = data.map((anime) => ({
-          name: anime.title,
-          image: anime.images.jpg.image_url,
+          mal_id: anime.mal_id,
+          title: anime.title,
+          images: anime.images,
           episodes: anime.episodes,
           score: anime.score,
           type: anime.type

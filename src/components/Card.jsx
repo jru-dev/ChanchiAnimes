@@ -3,14 +3,14 @@ const Card = ({ item }) => {
     <div className="col">
       <div className="card h-100">
         <img
-          src={item.image}
-          alt={item.name}
+          src={item.images?.jpg?.image_url}
+          alt={item.title}
           className="card-img-top"
           style={{ height: '250px', objectFit: 'cover' }}
         />
 
         <div className="card-body">
-          <h5 className="card-title">{item.name}</h5>
+          <h5 className="card-title">{item.title}</h5>
 
           <p className="card-text mb-1">
             <strong>Tipo:</strong> {item.type || 'N/A'}
