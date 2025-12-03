@@ -7,11 +7,24 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        'https://restcountries.com/v3.1/all?fields=name,flags,capital,region'
-      );
-      const data = await response.json();
-      setItems(data.slice(0, 6));
+      try {
+        const response = await fetch('https://api.jikan.moe/v4/top/anime');
+        const json = await response.json();
+
+        const data = json.data.slice(0, 6);
+
+        const formatted = data.map((anime) => ({
+          name: anime.title,
+          image: anime.images.jpg.image_url,
+          episodes: anime.episodes,
+          score: anime.score,
+          type: anime.type
+        }));
+
+        setItems(formatted);
+      } catch (error) {
+        console.error("Error fetching anime data:", error);
+      }
     };
 
     if (items.length === 0) {
@@ -22,8 +35,8 @@ const Home = () => {
   return (
     <div className="container py-5">
       <div className="text-center mb-5">
-        <h1 className="display-4">Paisess Gaa</h1>
-        <p className="lead">Somos consumidores (de enpoints xd)</p>
+        <h1 className="display-4">Animes chanchi</h1>
+        <p className="lead">Pa lo chanchi otakus</p>
       </div>
       <CardList items={items} />
     </div>

@@ -17,15 +17,15 @@ const Contact = () => {
     <div className="container py-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <h2 className="mb-4">Contactame hijito</h2>
+          <h2 className="mb-4">Contactame ps</h2>
 
           {success && (
-            <div className="alert alert-success">Mensaje enviado ono!</div>
+            <div className="alert alert-success">Mensaje enviado aea</div>
           )}
 
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label className="form-label">Nombres</label>
+              <label className="form-label">Nombre</label>
               <input
                 type="text"
                 className="form-control"
@@ -57,7 +57,7 @@ const Contact = () => {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary">Enviar Mensaje adnlksads</button>
+            <button type="submit" className="btn btn-primary">Enviar Mensaje al chanchiverso</button>
           </form>
         </div>
       </div>

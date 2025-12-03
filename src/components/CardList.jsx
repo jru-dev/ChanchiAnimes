@@ -2,7 +2,7 @@ import Card from './Card';
 
 const CardList = ({ items }) => {
   if (!items || items.length === 0) {
-    return <p className="text-center">No countries to display</p>;
+    return <p className="text-center">No animes to display</p>;
   }
 
   return (

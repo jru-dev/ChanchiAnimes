@@ -3,20 +3,26 @@ const Card = ({ item }) => {
     <div className="col">
       <div className="card h-100">
         <img
-          src={item.flags?.png}
-          alt={item.name?.common}
+          src={item.image}
+          alt={item.name}
           className="card-img-top"
-          style={{ height: '150px', objectFit: 'cover' }}
+          style={{ height: '250px', objectFit: 'cover' }}
         />
+
         <div className="card-body">
-          <h5 className="card-title">{item.name?.common}</h5>
+          <h5 className="card-title">{item.name}</h5>
+
           <p className="card-text mb-1">
-            <strong>Capital:</strong> {item.capital?.[0] || 'N/A'}
-          </p>
-          <p className="card-text mb-1">
-            <strong>Region:</strong> {item.region}
+            <strong>Tipo:</strong> {item.type || 'N/A'}
           </p>
 
+          <p className="card-text mb-1">
+            <strong>Episodios:</strong> {item.episodes ?? 'N/A'}
+          </p>
+
+          <p className="card-text mb-1">
+            <strong>Score:</strong> {item.score ?? 'N/A'}
+          </p>
         </div>
       </div>
     </div>
